@@ -66,6 +66,6 @@
 
 @media (width <= 600px) {
   .navbar > .btns-cover > .btn {
-    width: 10rem;
+    width: 13rem;
   }
 }
