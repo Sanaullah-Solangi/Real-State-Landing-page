@@ -1,0 +1,70 @@
+@media (width<=1130px) {
+  .section {
+    padding: 2rem;
+  }
+}
+
+@media (width<=1030px) {
+  .btns-cover,
+  .show .menu-bar,
+  .navbar > i {
+    display: none;
+  }
+
+  .toggle-btns,
+  .menu-bar,
+  .show .cancel-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    width: 95%;
+    height: 0%;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: var(--mainColor-2);
+    overflow: hidden;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+  }
+  .show .navbar {
+    overflow: scroll;
+    height: calc(80vh - 7rem);
+  }
+  .navbar a {
+    font-size: 2rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .navbar a:first-child {
+    margin-top: 2rem;
+  }
+  .navbar a:hover {
+    background-color: var(--mainColor-1);
+  }
+
+  .navbar > .btns-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5rem;
+    margin-bottom: 4rem;
+  }
+  .navbar > .btns-cover > .btn {
+    width: 20rem;
+  }
+}
+
+@media (width <= 600px) {
+  .navbar > .btns-cover > .btn {
+    width: 10rem;
+  }
+}

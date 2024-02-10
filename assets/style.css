@@ -1,0 +1,167 @@
+/*!========== base structure ==========*/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  color: var(--black);
+}
+
+/*!========== theme colors ==========*/
+
+:root {
+  --mainColor-1: rgb(192, 222, 232);
+  --mainColor-2: rgb(251, 217, 185);
+  --black: rgb(0, 0, 0);
+  --secondary-black: rgb(31, 31, 31);
+  --white-shade: rgb(250, 250, 250);
+  --secondary-white-shade: rgb(190, 190, 190);
+}
+
+/*!========== reuseable code ==========*/
+
+.d-flex {
+  display: flex;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.jc-center {
+  justify-content: center;
+}
+jc-around {
+  justify-content: space-around;
+}
+.al-center {
+  align-items: center;
+}
+.al-items {
+  align-items: start;
+}
+.al-items {
+  align-items: end;
+}
+.grid {
+  display: grid;
+}
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.m-auto {
+  margin: auto;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+.txt-center {
+  text-align: center;
+}
+.txt-cap {
+  text-transform: capitalize;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
+
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  content: "";
+  position: absolute;
+}
+
+.main-container,
+.header {
+  max-width: 1440px;
+}
+.contaier {
+  margin-top: 7rem;
+}
+.section {
+  padding: 2rem 5rem;
+}
+
+.br-radius-50 {
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+}
+
+.transition-3 {
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  width: 12rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 1px solid;
+}
+.btn--secondary {
+  border: none;
+}
+
+/*!========== header styling ==========*/
+.header-container {
+  padding: 2rem;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+
+.header {
+  height: 7rem;
+  background-color: var(--white-shade);
+}
+
+/*?=== navbar styling ===*/
+
+.navbar {
+  gap: 3rem;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+}
+.navbar i {
+  font-size: 2rem;
+}
+
+/*?=== header btns ===*/
+
+.btns-cover {
+  gap: 2rem;
+}
+
+.toggle-btns {
+  font-size: 2rem;
+}
