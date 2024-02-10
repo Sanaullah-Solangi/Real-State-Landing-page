@@ -10,8 +10,11 @@
   .navbar > i {
     display: none;
   }
-
   .toggle-btns,
+  .navbar > .btns-cover {
+    display: flex;
+  }
+
   .menu-bar,
   .show .cancel-btn {
     display: block;
@@ -19,11 +22,12 @@
 
   .navbar {
     position: absolute;
-    top: 7rem;
+    top: 6.5rem;
     left: 50%;
-    width: 95%;
+    width: 90%;
     height: 0%;
     flex-direction: column;
+    gap: 0;
     background-color: var(--mainColor-2);
     overflow: hidden;
     transform: translate(-50%);
@@ -33,9 +37,21 @@
     -o-transform: translate(-50%);
   }
   .show .navbar {
-    overflow: scroll;
+    overflow-y: scroll;
     height: calc(80vh - 7rem);
   }
+
+  .navbar::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+  .navbar::-webkit-scrollbar-thumb{
+    background-color:var(--mainColor-1);
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+}
   .navbar a {
     font-size: 2rem;
     font-weight: 500;
@@ -50,12 +66,11 @@
   }
 
   .navbar > .btns-cover {
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     gap: 3rem;
-    margin-bottom: 4rem;
+    margin: 2rem 0 4rem;
     padding-inline: 1rem;
   }
   .navbar > .btns-cover > .btn {
@@ -64,7 +79,16 @@
 }
 
 @media (width <= 600px) {
+  .navbar > .btns-cover {
+    gap: 1rem;
+  }
   .navbar > .btns-cover > .btn {
     width: 13rem;
+  }
+}
+
+@media (width <= 570px) {
+  .navbar {
+    width: 85%;
   }
 }
