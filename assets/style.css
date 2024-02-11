@@ -114,7 +114,12 @@ jc-around {
 }
 
 .common-heading {
-  font-size: 3rem;
+  font-size: 5rem;
+}
+
+.hero-container,
+.global-content {
+  grid-template-columns: 1.5fr 2fr;
 }
 
 .br-radius-50 {
@@ -194,8 +199,8 @@ jc-around {
 .main-container {
   margin-top: 11rem;
 }
-.hero-container {
-  grid-template-columns: 1.5fr 2fr;
+.hero-container,
+.subscribe-container {
   background: var(--bg-gradient);
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
@@ -208,40 +213,43 @@ jc-around {
   padding-bottom: 0;
 }
 
-.hero-content .hero-heading {
+.hero-content .hero-heading,
+.subscribe-content .subscribe-heading {
   font-size: 5rem;
   padding-block: 2rem;
   line-height: 6rem;
 }
-.hero-content p {
+:is(.hero-content, .subscribe-content) p {
   font-size: 1.6rem;
 }
 
-.hero-content .hero-input {
+.hero-content .hero-input,
+.subscribe-content .subscribe-input {
   margin-top: 2rem;
 }
 
-.hero-content .hero-input :is(input, button) {
+.hero-content .hero-input :is(input, button),
+.subscribe-content .subscribe-input :is(input, button) {
   border: none;
   outline: none;
   padding: 1rem 2rem;
 }
-.hero-content .hero-input input {
+:is(.hero-content .hero-input, .subscribe-content .subscribe-input) input {
   font-size: 2rem;
 }
-
-.hero-content .hero-input button {
+:is(.hero-content .hero-input, .subscribe-content .subscribe-input) button,
+.global-btns .btn {
   top: 0;
   right: 0;
   background-color: var(--black);
   color: white;
 }
 
-.hero-img {
+.hero-img,
+.subscribe-img {
   height: 55rem;
 }
-
-.hero-img img {
+:is(.hero-img, .subscribe-img) img {
   transform: translateY(6rem);
   -webkit-transform: translateY(6rem);
   -moz-transform: translateY(6rem);
@@ -270,7 +278,8 @@ jc-around {
   font-weight: bold;
 }
 
-:is(.this-easy-item, .projects-item) p {
+:is(.this-easy-item, .projects-item) p,
+.global-item-heading + p {
   text-align: justify;
   font-size: 1.4rem;
 }
@@ -301,4 +310,55 @@ jc-around {
 
 .projects-item p + img {
   width: 40%;
+}
+
+/*!========== global section styling ==========*/
+
+.global-content {
+  gap: 10rem;
+  width: 100%;
+}
+
+.global-heading {
+  width: 80rem;
+}
+
+.global-item-heading {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.global-item {
+  padding-block: 3rem;
+}
+
+.global-btns,
+.global-item {
+  gap: 3rem;
+}
+
+.global-btns .btn {
+  border: none;
+  outline: none;
+}
+.global-btns .global-btn--secondary {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: var(--black);
+}
+
+.global-counters {
+  margin-top: 5rem;
+}
+
+.counter-number {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.counter-number + span {
+  font-size: 1.7rem;
+}
+
+.global-img img {
+  height: 60rem;
 }
