@@ -35,7 +35,7 @@
     height: 0%;
     flex-direction: column;
     gap: 0;
-    background-color: var(--mainColor-2);
+    background-color: var(--mainColor-1);
     overflow: hidden;
     transform: translate(-50%);
     -webkit-transform: translate(-50%);
@@ -54,17 +54,6 @@
     height: calc(80vh - 7rem);
   }
 
-  .navbar::-webkit-scrollbar {
-    width: 0.7rem;
-  }
-  .navbar::-webkit-scrollbar-thumb {
-    background-color: var(--mainColor-1);
-    border-radius: 10rem;
-    -webkit-border-radius: 10rem;
-    -moz-border-radius: 10rem;
-    -ms-border-radius: 10rem;
-    -o-border-radius: 10rem;
-  }
   .navbar a {
     font-size: 2rem;
     font-weight: 500;
@@ -119,6 +108,9 @@
 }
 
 @media (width <= 600px) {
+  .show .navbar {
+    height: calc(60vh - 7rem);
+  }
   .navbar > .btns-cover {
     gap: 1rem;
   }
