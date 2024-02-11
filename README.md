@@ -1,1 +1,1 @@
-[Real State Landing Page]{https://replicarealstate.netlify.app}
+[Real State Landing Page](https://replicarealstate.netlify.app)
