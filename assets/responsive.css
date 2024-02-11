@@ -83,7 +83,7 @@
 @media (width <=930px) {
   .section {
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .grid-two-cols {
     grid-template-columns: 1fr;
@@ -102,6 +102,10 @@
   .hero-img,
   .subscribe-img {
     width: 100%;
+  }
+
+  .global-content {
+    gap: 1rem;
   }
 
   .global-item {
