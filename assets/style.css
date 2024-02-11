@@ -113,6 +113,10 @@ jc-around {
   padding: 2rem 5rem;
 }
 
+.common-heading {
+  font-size: 3rem;
+}
+
 .br-radius-50 {
   border-radius: 5rem;
   -webkit-border-radius: 5rem;
@@ -191,22 +195,23 @@ jc-around {
   margin-top: 11rem;
 }
 .hero-container {
+  grid-template-columns: 1.5fr 2fr;
   background: var(--bg-gradient);
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
-  height: 60rem;
+  height: 50rem;
+  height: fit-content;
   padding-right: 0;
   padding-bottom: 0;
 }
-.hero-content {
-  padding-top: 10rem;
-}
+
 .hero-content .hero-heading {
   font-size: 5rem;
   padding-block: 2rem;
+  line-height: 6rem;
 }
 .hero-content p {
   font-size: 1.6rem;
@@ -233,13 +238,67 @@ jc-around {
 }
 
 .hero-img {
-  height: 60rem;
+  height: 55rem;
 }
 
 .hero-img img {
-  transform: translateY(8rem);
-  -webkit-transform: translateY(8rem);
-  -moz-transform: translateY(8rem);
-  -ms-transform: translateY(8rem);
-  -o-transform: translateY(8rem);
+  transform: translateY(6rem);
+  -webkit-transform: translateY(6rem);
+  -moz-transform: translateY(6rem);
+  -ms-transform: translateY(6rem);
+  -o-transform: translateY(6rem);
+}
+
+/*!========== easy section styling ==========*/
+.section-heading {
+  margin: 5rem 0;
+}
+.section-heading p {
+  font-size: 1.6rem;
+}
+
+.this-easy-item {
+  gap: 1rem;
+}
+
+.this-easy-item img {
+  width: 20%;
+}
+
+.this-easy-item .this-easy-sub-heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+:is(.this-easy-item, .projects-item) p {
+  text-align: justify;
+  font-size: 1.4rem;
+}
+
+/*!========== projects section styling ==========*/
+.projects-item {
+  gap: 1rem;
+}
+.projects-item .projects-img {
+  background-image: url("./images/project-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-position: center;
+}
+
+.projects-item:nth-of-type(2) .projects-img {
+  background-image: url("./images/project-2.png");
+}
+
+.projects-item:nth-of-type(3) .projects-img {
+  background-image: url("./images/project-3.png");
+}
+
+.projects-item .projects-sub-heading {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.projects-item p + img {
+  width: 40%;
 }
