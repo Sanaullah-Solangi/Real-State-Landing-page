@@ -2,6 +2,13 @@
   .section {
     padding: 2rem;
   }
+  .hero-container {
+    padding-right: 0;
+  }
+
+  .hero-img {
+    height: 55rem;
+  }
 }
 
 @media (width<=1030px) {
@@ -35,6 +42,12 @@
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
     -o-transform: translate(-50%);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    padding: 0;
   }
   .show .navbar {
     overflow-y: scroll;
@@ -44,14 +57,14 @@
   .navbar::-webkit-scrollbar {
     width: 0.7rem;
   }
-  .navbar::-webkit-scrollbar-thumb{
-    background-color:var(--mainColor-1);
+  .navbar::-webkit-scrollbar-thumb {
+    background-color: var(--mainColor-1);
     border-radius: 10rem;
     -webkit-border-radius: 10rem;
     -moz-border-radius: 10rem;
     -ms-border-radius: 10rem;
     -o-border-radius: 10rem;
-}
+  }
   .navbar a {
     font-size: 2rem;
     font-weight: 500;
@@ -78,6 +91,33 @@
   }
 }
 
+@media (width <=930px) {
+  .section {
+    padding: 2rem;
+  }
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+    height: auto;
+    justify-items: center;
+  }
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content .hero-input {
+    margin-top: 3rem;
+  }
+  .hero-img {
+    width: 80%;
+  }
+}
+
+@media (width <= 720px) {
+  .hero-img {
+    width: 90%;
+  }
+}
+
 @media (width <= 600px) {
   .navbar > .btns-cover {
     gap: 1rem;
@@ -85,10 +125,32 @@
   .navbar > .btns-cover > .btn {
     width: 13rem;
   }
+
+  .hero-container {
+    gap: 0%;
+  }
+
+  .hero-content {
+    padding-top: 4rem;
+  }
+
+  .hero-content .hero-input input {
+    font-size: 1.6rem;
+  }
 }
 
 @media (width <= 570px) {
   .navbar {
     width: 85%;
+  }
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (width <=510px) {
+  .hero-content .hero-heading {
+    font-size: 4rem;
   }
 }

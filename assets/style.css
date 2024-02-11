@@ -22,9 +22,14 @@ a {
   --mainColor-1: rgb(192, 222, 232);
   --mainColor-2: rgb(251, 217, 185);
   --black: rgb(0, 0, 0);
+  --black-shade: rgb(190, 190, 190);
   --secondary-black: rgb(31, 31, 31);
   --white-shade: rgb(235, 235, 235);
-  --secondary-white-shade: rgb(190, 190, 190);
+  --bg-gradient: linear-gradient(
+    to right,
+    var(--mainColor-1),
+    var(--mainColor-2)
+  );
 }
 
 /*!========== reuseable code ==========*/
@@ -32,6 +37,11 @@ a {
 .d-flex {
   display: flex;
 }
+
+.dir-col {
+  flex-direction: column;
+}
+
 .jc-between {
   justify-content: space-between;
 }
@@ -52,6 +62,7 @@ jc-around {
 }
 .grid {
   display: grid;
+  gap: 4rem;
 }
 .grid-two-cols {
   grid-template-columns: repeat(2, 1fr);
@@ -130,12 +141,18 @@ jc-around {
   border: none;
 }
 
+.header-container,
+.main-container {
+  padding: 2rem;
+}
+
 /*!========== header styling ==========*/
 .header-container {
-  padding: 2rem;
   position: fixed;
   top: 0%;
   left: 0%;
+  background-color: white;
+  z-index: 999;
 }
 
 .header {
@@ -146,7 +163,9 @@ jc-around {
 /*?=== navbar styling ===*/
 
 .navbar {
-  gap: 3rem;
+  gap: 4rem;
+  background-color: rgba(250, 250, 250, 1);
+  padding: 1rem 2rem;
 }
 
 .navbar a {
@@ -164,4 +183,63 @@ jc-around {
 
 .toggle-btns {
   font-size: 2rem;
+}
+
+/*!========== hero section styling ==========*/
+
+.main-container {
+  margin-top: 11rem;
+}
+.hero-container {
+  background: var(--bg-gradient);
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  height: 60rem;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.hero-content {
+  padding-top: 10rem;
+}
+.hero-content .hero-heading {
+  font-size: 5rem;
+  padding-block: 2rem;
+}
+.hero-content p {
+  font-size: 1.6rem;
+}
+
+.hero-content .hero-input {
+  margin-top: 2rem;
+}
+
+.hero-content .hero-input :is(input, button) {
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+}
+.hero-content .hero-input input {
+  font-size: 2rem;
+}
+
+.hero-content .hero-input button {
+  top: 0;
+  right: 0;
+  background-color: var(--black);
+  color: white;
+}
+
+.hero-img {
+  height: 60rem;
+}
+
+.hero-img img {
+  transform: translateY(8rem);
+  -webkit-transform: translateY(8rem);
+  -moz-transform: translateY(8rem);
+  -ms-transform: translateY(8rem);
+  -o-transform: translateY(8rem);
 }
