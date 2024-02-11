@@ -110,13 +110,14 @@ jc-around {
   margin-top: 7rem;
 }
 .section {
-  margin-bottom: 6rem;
   padding: 2rem 5rem;
 }
 
-.section:first-child,
-.section:last-child {
-  margin-bottom: 0%;
+.hero-container,
+.this-easy-container,
+.projects-container,
+.global-container {
+  margin-bottom: 5rem;
 }
 
 .common-heading {

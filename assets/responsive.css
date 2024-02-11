@@ -23,12 +23,21 @@
   .show .cancel-btn {
     display: block;
   }
+  .show {
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    transition: all 0% linear;
+    -webkit-transition: all 0% linear;
+    -moz-transition: all 0% linear;
+    -ms-transition: all 0% linear;
+    -o-transition: all 0% linear;
+  }
 
   .navbar {
     position: absolute;
     top: 6.5rem;
     left: 50%;
-    width: 90%;
+    width: 100%;
     height: 0%;
     flex-direction: column;
     gap: 0;
@@ -81,9 +90,15 @@
 }
 
 @media (width <=930px) {
+  .hero-container,
+  .this-easy-container,
+  .projects-container,
+  .global-container {
+    margin-bottom: 2rem;
+  }
+
   .section {
     padding: 2rem;
-    margin-bottom: 1rem;
   }
   .grid-two-cols {
     grid-template-columns: 1fr;
@@ -130,12 +145,13 @@
   .grid-three-cols {
     grid-template-columns: 1fr;
   }
+
+  .global-counters {
+    margin-top: 2rem;
+  }
 }
 
 @media (width <= 600px) {
-  .navbar {
-    width: 90%;
-  }
   .show .navbar {
     height: calc(70vh - 7rem);
   }
