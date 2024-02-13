@@ -40,6 +40,8 @@
     width: 100%;
     height: 0%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 0;
     background-color: var(--white-shade);
     overflow: hidden;
@@ -57,19 +59,19 @@
   }
   .show .navbar {
     overflow-y: scroll;
-    height: calc(80vh - 7rem);
+    height: calc(95vh - 7rem);
   }
 
   .navbar a {
     font-size: 2rem;
     font-weight: 500;
     width: 100%;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
   }
 
   .navbar a,
   .navbar > .btns-cover {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .navbar a:hover {
@@ -82,7 +84,7 @@
     width: 100%;
     gap: 3rem;
     margin: 0rem 0 4rem;
-    padding: 1rem 1rem 0;
+    padding: 2rem 0;
   }
   .navbar > .btns-cover > .btn {
     width: 20rem;
@@ -152,9 +154,9 @@
 }
 
 @media (width <= 600px) {
-  .show .navbar {
+  /* .show .navbar {
     height: calc(70vh - 7rem);
-  }
+  } */
   .navbar > .btns-cover {
     gap: 1rem;
   }
