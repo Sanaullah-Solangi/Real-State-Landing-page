@@ -59,7 +59,7 @@
   }
   .show .navbar {
     overflow-y: scroll;
-    height: calc(95vh - 7rem);
+    height: calc(98vh - 7rem);
   }
 
   .navbar a {
@@ -88,6 +88,10 @@
   }
   .navbar > .btns-cover > .btn {
     width: 20rem;
+  }
+  .btns-cover > .btn:first-child {
+    background-color: var(--black);
+    color: white;
   }
 }
 
@@ -189,10 +193,30 @@
 }
 
 @media (width <=510px) {
-  .header-container,
   .main-container {
     padding: 0.5rem;
   }
+  .header-container {
+    padding: 1.5rem 0.5rem 0rem;
+  }
+  .header {
+    padding: 1rem 2rem;
+    height: 5rem;
+  }
+
+  .header .logo {
+    width: 7rem;
+  }
+  .navbar {
+    top: 5rem;
+  }
+  .navbar a {
+    font-size: 1.5rem;
+  }
+  .header .logo img {
+    object-fit: contain;
+  }
+
   .hero-content .hero-heading,
   .subscribe-content .subscribe-heading {
     font-size: 3rem;
