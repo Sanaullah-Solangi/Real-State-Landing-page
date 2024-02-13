@@ -1,7 +1,4 @@
 @media (width<=1130px) {
-  .section {
-    padding: 2rem;
-  }
   .hero-container,
   .subscribe-container {
     padding-right: 0;
@@ -9,6 +6,9 @@
 }
 
 @media (width<=1030px) {
+  .section {
+    padding: 2rem 1rem;
+  }
   .btns-cover,
   .show .menu-bar,
   .navbar > i {
@@ -99,9 +99,6 @@
     margin-bottom: 2rem;
   }
 
-  .section {
-    padding: 2rem;
-  }
   .grid-two-cols {
     grid-template-columns: 1fr;
     height: auto;
@@ -154,9 +151,6 @@
 }
 
 @media (width <= 600px) {
-  /* .show .navbar {
-    height: calc(70vh - 7rem);
-  } */
   .navbar > .btns-cover {
     gap: 1rem;
   }
@@ -195,11 +189,32 @@
 }
 
 @media (width <=510px) {
+  .header-container,
+  .main-container {
+    padding: 0.5rem;
+  }
   .hero-content .hero-heading,
   .subscribe-content .subscribe-heading {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+  .common-heading {
+    font-size: 2.5rem;
   }
   .global-item-heading {
     font-size: 2.2rem;
+  }
+}
+@media (width <= 310px) {
+  .global-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+  }
+  .counter-number {
+    font-size: 2rem;
+  }
+  .counter-number + span {
+    font-size: 1.4rem;
   }
 }
