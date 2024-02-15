@@ -117,6 +117,15 @@
   :is(.hero-content .hero-input, .subscribe-content .subscribe-input) {
     margin-top: 3rem;
   }
+
+  .this-easy-item {
+    align-items: center;
+  }
+
+  .this-easy-item > p {
+    text-align: center;
+  }
+
   .hero-img,
   .subscribe-img {
     width: 100%;
@@ -194,7 +203,7 @@
 
 @media (width <=510px) {
   .main-container {
-    padding: 0.5rem;
+    padding: 1rem;
   }
   .header-container {
     padding: 1.5rem 0.5rem 0rem;
